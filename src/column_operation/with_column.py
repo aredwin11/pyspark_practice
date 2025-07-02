@@ -10,7 +10,9 @@ sch=['id','name','salary']
 df=spark.createDataFrame(info,sch)
 df.show()
 df.printSchema()
-#help(df.withColumn)
+
+#to view the documentation of withColumn
+help(df.withColumn)
 
 df1=df.withColumn('Bonus_salary',df.salary+200)
 df1.show()
